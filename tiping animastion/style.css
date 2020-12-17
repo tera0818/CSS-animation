@@ -1,0 +1,68 @@
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+body {
+    margin: 0 auto;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+h1 { 
+	font: bold 300% Consolas, Monaco, monospace;
+	border-right: .1em solid black;
+	width: 16.5em; 
+    width: 8ch;/* 文字数 steps( ,end)と同じ数値*/
+    margin: 0 auto;/*2em 1em;*/
+	white-space: nowrap;
+    overflow: hidden;
+    position: absolute; /* 中央寄せ */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	-webkit-animation: typing 1s steps(8, end),blink-caret .5s step-end infinite alternate;
+}
+
+/*********** 上記は省略されている 意味 **********/
+
+/*
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+ 
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+ 
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+ 
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+ 
+body { font-family: Consolas, monospace; }
+ 
+h1 {
+    font-size:150%;
+    width:16.3em;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right: .1em solid black;
+     
+    -webkit-animation: typing 17s steps(30, end), blink-caret 1s step-end infinite;
+    -moz-animation: typing 17s steps(30, end),  blink-caret 1s step-end infinite;
+}
+*/
